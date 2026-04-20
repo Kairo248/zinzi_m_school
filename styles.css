@@ -301,9 +301,10 @@ textarea {
 .card ul,
 .reflection-item ul {
   padding-left: 20px;
-  margin: 12px 0 0;
+  margin: 12px 0 4px;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
 }
 
 .card ul li {
@@ -333,21 +334,37 @@ textarea {
 }
 
 .reflection-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   align-items: stretch;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .reflection-item {
   min-height: 0;
   border-left: 4px solid var(--accent);
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  display: block;
+  padding: 26px 28px;
+}
+
+.reflection-item h3 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.reflection-item h4 {
+  margin: 18px 0 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--accent-dark);
 }
 
 .reflection-item p {
-  margin: 0 0 0.65rem;
-  font-size: 0.9rem;
+  margin: 0 0 0.8rem;
+  font-size: 0.95rem;
+  line-height: 1.72;
+  max-width: 78ch;
 }
 
 .reflection-item p:last-child {
@@ -532,7 +549,7 @@ textarea {
 
 @media (max-width: 1180px) {
   .reflection-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
@@ -558,6 +575,10 @@ textarea {
   .contact-grid,
   .reflection-grid {
     grid-template-columns: 1fr;
+  }
+
+  .reflection-item {
+    padding: 22px 20px;
   }
 }
 
